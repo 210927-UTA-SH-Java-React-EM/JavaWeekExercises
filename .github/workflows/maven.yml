@@ -13,6 +13,7 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v1
       - name: Build and Run Tests
+        working-directory: ./JavaWeekExercises/JavaHandsOn
         run: mvn test
       - name: Publish Test Report
         uses: mikepenz/action-junit-report@v2
