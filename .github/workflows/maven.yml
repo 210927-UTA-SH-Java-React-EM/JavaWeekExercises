@@ -13,6 +13,8 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v1
       - name: cd into directory
+        run: cd JavaHandsOn
+      - name: Run Tests
         run: ls
       - name: Publish Test Report
         uses: mikepenz/action-junit-report@v2
