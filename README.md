@@ -1,4 +1,3 @@
-![](https://github.com/210927-UTA-SH-Java-React-EM/JavaWeekExercises/workflows/tests/badge.svg)
 # JavaWeekExercises
 Week one of Ethan's Java MSA with React Hands on Exercises for Java
 
