@@ -6,4 +6,27 @@ package com.example.activity.one;
 3. Foo should have a public no-args constructor that sets the default value of bar to "bar"
 4. Foo should have a public one-arg constructor that sets the value of bar to what ever value is input into the constructor
 5. Foo should have a method called printBar which simply prints the value of your variable bar
+
 */
+
+public class Foo {
+	
+	public String bar;
+	
+	public Foo() {
+		bar = "bar";
+	}
+		
+	public Foo(String str) {
+		this.bar = str;
+	}
+	
+	public void printBar() {
+		System.out.println(bar);
+		
+	}
+		
+		
+	}
+	
+	
