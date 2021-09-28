@@ -1,5 +1,4 @@
 package com.example.activity.one;
-
 /*
 1. In this file create a public class called Foo
 2. Foo should have a public String variable called bar
@@ -7,3 +6,18 @@ package com.example.activity.one;
 4. Foo should have a public one-arg constructor that sets the value of bar to what ever value is input into the constructor
 5. Foo should have a method called printBar which simply prints the value of your variable bar
 */
+public class Foo {
+	public String bar;
+	
+	public Foo() {
+		bar = "bar";
+	}
+	
+	public Foo(String s) {
+		this.bar = s;
+	}
+	
+	void printBar() {
+		System.out.println(bar);
+	}
+}
