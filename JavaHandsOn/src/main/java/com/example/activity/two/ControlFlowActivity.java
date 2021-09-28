@@ -1,5 +1,7 @@
 package com.example.activity.two;
 
+import java.util.Iterator;
+
 public class ControlFlowActivity {
 	
 	public String fooBar(int input) {
@@ -8,25 +10,46 @@ public class ControlFlowActivity {
 		//The method should return bar if the input is divisible by 5
 		//The method should return buz if the input is divisible by both 3 and 5
 		//HINT use the modulos operator to determine the divisibility of the input
+		String result;
+		if((input%3==0)&(input%5!=0)) {
+			result = "foo";
+		}
+		else if((input%5==0)&(input%3!=0)) {
+			result = "bar";
+		}
+		else  {
+			result = "buz";
+		}
 		
 		
-		return "This should return the correct output";
+		
+		return result;
 	}
 	
 	public int sumOfEvens() {
 		//Fill out the method below that adds up all of the even numbers from 1 to 100
 		//Use a for loop to achieve this
-		
+		int result=0;
+		for (int i =0; i<=100;i+=2) {
+			result+=i;
+			
+		}
 		//This should be changed to return the correct output
-		return 0;
+		return result;
 	}
 	
 	public int sumOfNumbers(int input) {
 		//Fill out the method below that adds up all the numbers from 1 to the given input using a while loop
-
-		
+		int i =1;
+		int result=0;
+		while (i<=input) {
+			result+=i;
+			i++;
+			
+		}
+				
 		//This should be changed to return the correct output
-		return 0;
+		return result;
 	}
 
 }
