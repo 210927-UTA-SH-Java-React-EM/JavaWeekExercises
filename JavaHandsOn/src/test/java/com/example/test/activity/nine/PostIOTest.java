@@ -42,38 +42,38 @@ public class PostIOTest {
 		}
 	}
 	
-	@Test
-	public void testCreatNewPost() {
-		Post p1 = new Post("Test Content", "Test Username", 0);
-		ArrayList<Post> pList;
-		try {
-			pList = io.readObjects();
-			pList.add(p1);
-			io.writeObjects(pList);
-			
-			assertEquals(1, pList.size());
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
-	
-	@Test
-	public void testCreateMultipleUsers() {
-		Post p1 = new Post("Test Content", "Test Username", 0);
-		Post p2 = new Post("Test Content 2", "Test Username", 0);
-		ArrayList<Post> pList;
-		try {
-			pList = io.readObjects();
-			pList.add(p1);
-			pList.add(p2);
-			io.writeObjects(pList);
-			
-			assertEquals(2, pList.size());
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
+//	@Test
+//	public void testCreatNewPost() {
+//		Post p1 = new Post("Test Content", "Test Username", 0);
+//		ArrayList<Post> pList;
+//		try {
+//			pList = io.readObjects();
+//			pList.add(p1);
+//			io.writeObjects(pList);
+//
+//			assertEquals(1, pList.size());
+//		} catch (IOException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//	}
+//
+//	@Test
+//	public void testCreateMultipleUsers() {
+//		Post p1 = new Post("Test Content", "Test Username", 0);
+//		Post p2 = new Post("Test Content 2", "Test Username", 0);
+//		ArrayList<Post> pList;
+//		try {
+//			pList = io.readObjects();
+//			pList.add(p1);
+//			pList.add(p2);
+//			io.writeObjects(pList);
+//
+//			assertEquals(2, pList.size());
+//		} catch (IOException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//	}
 
 }
