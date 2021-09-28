@@ -16,10 +16,11 @@ public class FunWithStrings {
 	
 	public String replaceAllSpaces(String input) {
 		//Using the .replaceAll() method, replace all the spaces in the input text with '-'
-		
+		String oldStr = input;
+		String newStr = oldStr.replaceAll(" ", "-");
 		
 		//This should be modified to return the correct string
-		return "";
+		return newStr;
 	}
 	
 	
