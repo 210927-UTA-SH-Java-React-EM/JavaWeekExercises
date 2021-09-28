@@ -9,24 +9,39 @@ public class ControlFlowActivity {
 		//The method should return buz if the input is divisible by both 3 and 5
 		//HINT use the modulos operator to determine the divisibility of the input
 		
+		if(input%3==0&& input%5==0) {
+			return "buz";
+		}else if(input%3==0) {
+			return "foo";
+		}else if (input%5==0) {
+			return "bar";
+		}else return "Not divisible by any";
 		
-		return "This should return the correct output";
 	}
 	
 	public int sumOfEvens() {
 		//Fill out the method below that adds up all of the even numbers from 1 to 100
 		//Use a for loop to achieve this
-		
+		int stor = 0;
 		//This should be changed to return the correct output
-		return 0;
+		for(int x = 0; x<101;x++) {
+			if (x%2==0) {
+				stor = stor+x;
+			}
+		}
+		return stor;
 	}
 	
 	public int sumOfNumbers(int input) {
 		//Fill out the method below that adds up all the numbers from 1 to the given input using a while loop
-
+int stor =0;
+		while(input>0) {
+stor = stor+input;
+input--;
+}
 		
 		//This should be changed to return the correct output
-		return 0;
+		return stor;
 	}
 
 }
