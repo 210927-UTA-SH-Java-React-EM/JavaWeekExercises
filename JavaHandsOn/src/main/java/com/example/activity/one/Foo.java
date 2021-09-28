@@ -17,5 +17,7 @@ public class Foo {
 	public Foo(String newValue) {
 		this.bar = newValue;
 	}
-	
+	public void printBar() {
+		System.out.println(bar);
+	}
 }
