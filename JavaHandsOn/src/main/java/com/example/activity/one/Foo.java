@@ -1,5 +1,26 @@
 package com.example.activity.one;
 
+public class Foo{
+	
+	public String bar;
+	
+	
+	public Foo() {
+		this.bar = "bar";
+	}
+	
+	public Foo(String str) {
+		this.bar = str;
+	}
+	
+	public void printBar() {
+		System.out.println("The variable is: " + this.bar);
+	}
+	
+	
+	
+}
+
 /*
 1. In this file create a public class called Foo
 2. Foo should have a public String variable called bar
