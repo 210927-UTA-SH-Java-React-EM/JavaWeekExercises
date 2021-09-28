@@ -13,6 +13,7 @@ public class Foo {
 	
 	public Foo() {
 		bar = "bar";
+		// adding a comment to see if Github is actually updating...
 		
 	}
 	public Foo(String a) {
