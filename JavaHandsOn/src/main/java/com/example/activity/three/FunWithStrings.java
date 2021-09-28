@@ -9,17 +9,27 @@ public class FunWithStrings {
 		//Loop through the input text and return the first instance of a vowel (aeiou)
 		//Should return -1 if no vowels present
 		
+		for(int i =0; i<input.length();i++)
+		{
+			if(input.charAt(i) == 'a' || input.charAt(i) == 'e'  || input.charAt(i)=='o'
+			||		input.charAt(i) == 'i' || input.charAt(i) == 'u')
+			{
+				return input.charAt(i);
+			}
+		}
+		
 		//This should be modified to return the correct char
-		return '0';
+		return (char) -1;
 	}
 	
 	
 	public String replaceAllSpaces(String input) {
 		//Using the .replaceAll() method, replace all the spaces in the input text with '-'
-		
+	       
+		String st = input.replaceAll(" ", "-");
 		
 		//This should be modified to return the correct string
-		return "";
+		return st;
 	}
 	
 	
@@ -27,15 +37,32 @@ public class FunWithStrings {
 		//Expect the input to be crazy like this "InPUT iS noT UNIform"
 		//Use the string methods .toLowerCase() and .contains to find out if the given word is contained inside of input
 		
+		boolean bl = input.toLowerCase().contains(word);
+		
 		//This should be modified to return the correct boolean
-		return false;
+		return bl;
 	}
 	
 	public boolean isPalindrome(String input) {
 		//Use your knowledge of loops, and .charAt() to find out if the input is a palendrome
 		
+		boolean bl = false;
+		for(int i =0; i<input.length() / 2;i++)
+		{
+			if(input.charAt(i) == input.charAt(input.length() - i ))
+			{
+	            bl =  true;       			
+			}
+			else
+			{
+				bl = false;
+				break;
+			}
+		}
+		
+		
 		//This should be modified to return the correct boolean
-		return false;
+		return bl;
 	}
 	
 }
