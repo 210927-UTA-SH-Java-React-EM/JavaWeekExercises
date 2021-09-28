@@ -1,10 +1,9 @@
 package com.example.test.activity.one;
 
 import static org.junit.Assert.*;
-
+import com.example.activity.one.*;
 import org.junit.Test;
 
-import com.example.activity.one.Foo;
 
 public class ActivityOneTest {
 	
@@ -22,7 +21,7 @@ public class ActivityOneTest {
 	
 	@Test
 	public void methodTest() {
-		Class foo = Foo.class;
+		Class<Foo> foo = Foo.class;
 		try {
 			foo.getDeclaredMethod("printBar", null);
 		}

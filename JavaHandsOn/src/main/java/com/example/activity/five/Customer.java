@@ -1,0 +1,60 @@
+package com.example.activity.five;
+
+/*
+ * 1. Create an abstract class called Customer with:
+	- Four properties, name, balance, cart (String), cartCost
+	
+	- An all-args constructor used for constructor chaining
+	
+	- A public method called addToCart which takes a item as a string, and a cost
+	  as an int, and adds the item to the cart and cost to the cartCost, returns the
+	  updated cart
+	  
+	- A public abstract method called buy
+	
+2. Create an interface called Premium with:
+	- A String property title set to the title of the user
+	
+	- An int method called discountPrice which takes in an int
+	
+3. Create a class called PremiumCustomer that:
+	- extends Customer, and implements Premium
+	
+	- has private properties vipCard which is their card number, a integer years
+	  which keeps track of the number of years they have been vip
+	
+	- The PremiumCustomer should have a no-args constructor, and an all args
+	  constructor that allows you to set the properties of the Customer class,
+	  and the properties of the PremiumCustomer
+	  
+	- implement the abstract methods so that the premium user gets a discount
+	  of 15% on all items in their cart, and the discounted cost gets deducted
+	  from their balance
+	  
+	- implement the getters and setters for the premium user
+ * 
+ */
+
+public abstract class Customer {
+	String name;
+	double balance;
+	String cart;
+	int cartCost;
+	
+	public Customer(String name, double balance, String cart, int cartCost)
+	{
+		this.name = name;
+		this.balance = balance;
+		this.cart = cart;
+		this.cartCost = cartCost;
+	}
+	
+	public String addToCart(String item, int cost) 
+	{
+		cart += item;
+		cartCost += cost;
+		return cart;
+	}
+	
+	public abstract void buy();
+}
