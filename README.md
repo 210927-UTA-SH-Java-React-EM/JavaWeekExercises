@@ -11,3 +11,5 @@ Week one of Ethan's Java MSA with React Hands on Exercises for Java
 ## 2. Complete the exercises as they are given to you, if you need more time, complete them during your flex time
 
 ## 3. As you complete an exercise, run the given tests for the exercise, if they pass congradulations, if they fail you should fix your code until they pass 
+
+Push test - Nick Guthrie
