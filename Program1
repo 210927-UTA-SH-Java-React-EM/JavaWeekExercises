@@ -1,0 +1,32 @@
+package javaapplication5;
+
+/**
+ *
+ * @author m_calestino
+ */
+//1. In this file create a public class called Foo
+public class Foo {
+
+    // 2. Foo should have a public String variable called bar
+    public String bar;
+
+    // 3. Foo should have a public no-args constructor that sets the default 
+    // value of bar to "bar"
+    public Foo() {
+        this.bar = "bar";
+    }
+    
+    // 4. Foo should have a public one-arg constructor that sets the value 
+    // of bar to what ever value is input into the constuctor
+    public Foo(String s){
+        this.bar = s;
+        
+    }
+    
+    // 5. Foo should have a method called printBar which simply prints the 
+    // value of your variable bar
+    public void printBar() {
+        
+        System.out.println(this.bar);
+    }
+}
