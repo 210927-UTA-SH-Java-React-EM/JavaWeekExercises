@@ -10,6 +10,7 @@ package com.example.activity.one;
 
 public class Foo {
 	String bar;
+	private Object printBar;
 	
 	public Foo() {
 		this.bar = "bar";
@@ -27,7 +28,8 @@ public class Foo {
 	}
 	
 	public static void main(String[] args) {
-	    Foo obj = new Foo();
+	    Foo obj = new Foo("bar");
+	    System.out.println(obj.bar);
 	    obj.printBar();
 	}
 }

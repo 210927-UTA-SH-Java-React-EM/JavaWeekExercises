@@ -30,6 +30,7 @@ public class FunWithStrings {
 		
 		if (!found) {
 			res = 'z';
+			//res = (char)-1;  This will not print -1 but ?
 		}
 		
 		return res;
@@ -74,18 +75,21 @@ public class FunWithStrings {
 		FunWithStrings obj = new FunWithStrings();
 		System.out.println("---- Test getFirstVowel() ----");
 		char myRes = obj.getFirstVowel("Babarere");
-		if (myRes == 'z') {
+		//System.out.println(myRes);	
+		if (myRes == -1) {
 			System.out.println("Babarere does not contain any vowel");			
 		} else {
 			System.out.println("Babarere has at least one vowel and the first is: " + myRes);
-		}
+		}		
 		
 		myRes = obj.getFirstVowel("qwrtyh");
+		//System.out.println(myRes);
+		
 		if (myRes == 'z') {
 			System.out.println("qwrtyh does not contain any vowel");			
 		} else {
 			System.out.println("qwrtyh has at least one vowel and the first is: " + myRes);
-		}
+		}		
 		
 		System.out.println("\n---- Test replaceAllSpaces() ----");
 		System.out.println(obj.replaceAllSpaces("I am loving Java"));
