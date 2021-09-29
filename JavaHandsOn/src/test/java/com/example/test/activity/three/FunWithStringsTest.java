@@ -25,7 +25,7 @@ public class FunWithStringsTest {
 	@Test
 	public void getFirstVowelTest3() {
 		int firstVowel = fws.getFirstVowel("dfjnmkrdjfsdhnd");
-		assertEquals(0, firstVowel);
+		assertEquals(-1, firstVowel);
 	}
 	
 	@Test

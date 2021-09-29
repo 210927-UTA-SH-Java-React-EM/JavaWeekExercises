@@ -4,37 +4,37 @@ public class FunWithStrings {
 	
 	//In this activity you will use your knowledge of control flow and string to complete the below methods
 	
-	public char getFirstVowel(String input) {
+	public int getFirstVowel(String input) {
 		//Using the .length() method and .charAt() method
 		//Loop through the input text and return the first instance of a vowel (aeiou)
 		//Should return -1 if no vowels present
 		
 		int length = input.length();
-		char vowel = 0;
+		int index = 0;
 		for(int i = 0; i<=length; i++)
 		{
 			switch(input.charAt(i)) {
 			case 'a':
-				vowel = 'a';
+				index = i;
 			break;
 			case 'e':
-				vowel = 'e';
+				index = i;
 			break;
 			case 'i':
-				vowel = 'i';
+				index = i;
 			break;
 			case 'o':
-				vowel = 'o';
+				index = i;
 		    break;
 			case 'u':
-				vowel = 'u';
+				index = i;
 			break;
 			default:
-				vowel = '0';
+				index = -1;
 			}		
 		}
 		//This should be modified to return the correct char
-		return vowel;
+		return index;
 	}
 	
 	
