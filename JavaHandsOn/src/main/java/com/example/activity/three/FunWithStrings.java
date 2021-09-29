@@ -11,16 +11,7 @@ public class FunWithStrings {
 		//Should return -1 if no vowels present
 		for (int i = 0; i < input.length(); i++){
 			char c = input.charAt(i);
-
-			if (c == 'a'){
-				return i;
-			}if (c == 'e'){
-				return i;
-			}if (c == 'i'){
-				return i;
-			}if (c == 'o'){
-				return i;
-			}if (c == 'u'){
+			if (c == 'a' || c == 'e' || c == 'i' || c == 'o' ||c == 'u'){
 				return i;
 			}
 		}

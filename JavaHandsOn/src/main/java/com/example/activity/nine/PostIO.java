@@ -1,10 +1,8 @@
 package com.example.activity.nine;
+import com.example.activity.nine.Post;
 
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
+
+import java.io.*;
 import java.util.ArrayList;
 
 //Fillout the PostIO class to be able to read and write Post objects to a file called post.txt
@@ -12,7 +10,7 @@ import java.util.ArrayList;
 public class PostIO<Post> {
 	
 	//Fillout the writeObjects method to take in an ArrayList of posts to write to the file
-	public void writeObjects(ArrayList<Post> postList) {
+	public void writeObjects(ArrayList<Post> postList){
 
 	}
 	
