@@ -5,23 +5,39 @@ public class FunWithArrays {
 	public int[] squares(int a, int b, int c, int d) {
 		//Given the four inputs, square them, and put them in an array to return
 		
+		int[] test = {a*a, b*b, c*c, d*d};
 		
 		//This should be modified to return the correct array
-		return new int[4];
+		return test;
 	}
 	
 	public int arraySum(int[] nums) {
 		//Return the sum of the numbers inside of the given array
 		
+		int sum = 0;
+		
+		for(int i = 0; i<nums.length; i++) {
+			
+			sum += nums[i];
+		}
+		
 		//This should be modifed to return the correct number
-		return 0;
+		return sum;
 	}
 	
 	public double arrayAverage(double[] nums) {
 		//Return the average of the numbers given in the array
 		
+		double aver = 0;
+		
+		
+		for(int i=0; i<nums.length; i++) {
+			
+			aver += nums[i];
+		}
+		
 		//This should be modified to return the correct number
-		return 0.0;
+		return aver/nums.length;
 	}
 	
 }
