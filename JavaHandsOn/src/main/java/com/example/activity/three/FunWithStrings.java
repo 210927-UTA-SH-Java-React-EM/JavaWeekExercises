@@ -5,8 +5,8 @@ import com.example.activity.one.Foo;
 public class FunWithStrings {
 	
 	//In this activity you will use your knowledge of control flow and string to complete the below methods
-	
-	public char getFirstVowel(String input) {
+	//Note this changed fron char to int to enable return of -1
+	public int getFirstVowel(String input) {
 		//Using the .length() method and .charAt() method
 		//Loop through the input text and return the first instance of a vowel (aeiou)
 		//Should return -1 if no vowels present		
@@ -17,20 +17,14 @@ public class FunWithStrings {
 		String vowels = "aeiou";
 		int le = vowels.length();
 		boolean found = false;
-		char res = 0;
+		int res = -1;
 		for (int i = 0; i < len; i++) {
 			for (int j = 0; j < le; j++) {
 				if (Character.toLowerCase(input.charAt(i)) == vowels.charAt(j)) {
-					res = input.charAt(i);
-					found = true;
+					res = i;
 					break;
 				}				
 			}			
-		}
-		
-		if (!found) {
-			res = 'z';
-			//res = (char)-1;  This will not print -1 but ?
 		}
 		
 		return res;
@@ -74,22 +68,8 @@ public class FunWithStrings {
 	public static void main(String[] args) {
 		FunWithStrings obj = new FunWithStrings();
 		System.out.println("---- Test getFirstVowel() ----");
-		char myRes = obj.getFirstVowel("Babarere");
-		//System.out.println(myRes);	
-		if (myRes == -1) {
-			System.out.println("Babarere does not contain any vowel");			
-		} else {
-			System.out.println("Babarere has at least one vowel and the first is: " + myRes);
-		}		
-		
-		myRes = obj.getFirstVowel("qwrtyh");
-		//System.out.println(myRes);
-		
-		if (myRes == 'z') {
-			System.out.println("qwrtyh does not contain any vowel");			
-		} else {
-			System.out.println("qwrtyh has at least one vowel and the first is: " + myRes);
-		}		
+		System.out.println(obj.getFirstVowel("Babarere"));
+		System.out.println(obj.getFirstVowel("qwrtyh"));
 		
 		System.out.println("\n---- Test replaceAllSpaces() ----");
 		System.out.println(obj.replaceAllSpaces("I am loving Java"));

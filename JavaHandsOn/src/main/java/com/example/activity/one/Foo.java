@@ -28,8 +28,13 @@ public class Foo {
 	}
 	
 	public static void main(String[] args) {
-	    Foo obj = new Foo("bar");
+		Foo obj1 = new Foo();
+	    System.out.println(obj1.bar);
+	    obj1.printBar();
+	    
+	    Foo obj = new Foo("booze");
 	    System.out.println(obj.bar);
-	    obj.printBar();
+	    obj.printBar();	    
+	    
 	}
 }
