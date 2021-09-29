@@ -9,8 +9,35 @@ public class FunWithStrings {
 		//Loop through the input text and return the first instance of a vowel (aeiou)
 		//Should return -1 if no vowels present
 		
+		input = input.toLowerCase();
+		
+		for(int i = 0;i<input.length();i++) {
+			switch(input.charAt(i)) {
+			case 'a':
+				return input.charAt(i);
+				
+			case 'e':
+				return input.charAt(i);
+				
+			case 'i':
+				return input.charAt(i);
+				
+			case 'o':
+				return input.charAt(i);
+				
+			case 'u':
+				return input.charAt(i);
+				
+			default:
+				continue;
+					
+			}
+			
+			
+		}
+		
 		//This should be modified to return the correct char
-		return '0';
+		
 	}
 	
 	
