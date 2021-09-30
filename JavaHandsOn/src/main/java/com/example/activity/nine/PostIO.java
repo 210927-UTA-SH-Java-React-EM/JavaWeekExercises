@@ -17,7 +17,7 @@ public class PostIO<Post> {
 	
 	//Fillout the writeObjects method to take in an ArrayList of posts to write to the file
 	public void writeObjects(ArrayList<Post> postList) {
-		try(ObjectOutputStream objectOutput = new ObjectOutputStream(new FileOutputStream("post.txt"));)
+		try(ObjectOutputStream objectOutput = new ObjectOutputStream(new FileOutputStream("post.txt",true));)
 		{
 			for(Post p: postList)
 			{
@@ -36,12 +36,21 @@ public class PostIO<Post> {
 	//Fillout the readObjects method to get all the posts from the file
 	public ArrayList<Post> readObjects() throws IOException{
 
+		
+		ArrayList<Post> arrlist = new ArrayList<Post>();
 		try(ObjectInputStream objectinput = new ObjectInputStream(new FileInputStream("post.txt"));)
 		{
 			Post p;
-			while(p=(Post) objectinput.readObject())
-		
-		return new ArrayList<Post>();
-	}
+			while((boolean) (p=(Post) objectinput.readObject()))
+			{
+				arrlist.add(p);
+			}
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
 	
+		return arrlist;
+	}	
 }
