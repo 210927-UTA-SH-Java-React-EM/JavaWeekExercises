@@ -32,9 +32,17 @@ class Producer extends Thread {
         synchronized(buffer) {
         	//1. While the buffer is full, print that is is full and wait with the wait() method
         	//HINT wait needs to be called on the buffer itself
+        	if(buffer.size() == SIZE) {
+        		System.out.println("Producer, the buffer is full. Please Wait...");
+        		buffer.wait();
+        	}
+        	
         	//2. If the buffer is empty add the next value to the buffer
-        	//3. Notify the other threads the buffer has been updated with notify
+    		buffer.add(i);
+    		//3. Notify the other threads the buffer has been updated with notify
         	//Hint notify needs to be called on the buffer itself
+        	buffer.notify();
+    		
         }
     }
 }
