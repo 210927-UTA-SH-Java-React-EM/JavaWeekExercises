@@ -13,19 +13,34 @@ public class ExceptionsTest {
 	@Test
 	public void validLoginTest() {
 		User u = new User("test", "password", 10);
-		assertTrue(u.login("test", "password"));
+		try {
+			assertTrue(u.login("test", "password"));
+		} catch (InvalidCredentialsException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 	@Test(expected = InvalidCredentialsException.class)
 	public void invalidUsernameTest() {
 		User u = new User("test", "password", 10);
-		u.login("tester", "password");
+		try {
+			u.login("tester", "password");
+		} catch (InvalidCredentialsException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 	@Test(expected = InvalidCredentialsException.class)
 	public void invalidPasswordTest() {
 		User u = new User("test", "password", 10);
-		u.login("test", "pass");
+		try {
+			u.login("test", "pass");
+		} catch (InvalidCredentialsException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 	@Test
