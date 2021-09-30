@@ -9,6 +9,7 @@ public class PremiumCustomer extends Customer implements Premium{
 	
 	  public PremiumCustomer()
 	  {
+		 // title = "Premium";
 		 vipCard = 0;
 		 years = 0;
 	  }

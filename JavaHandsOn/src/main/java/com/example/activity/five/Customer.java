@@ -28,8 +28,9 @@ public abstract class Customer {
     
     public String addToCart(String item,int cost)
     {
-    	cart+= item;
+    	cart+=","+ item;
     	cartCost+= cost;
+    	
     return cart;	
     }
 	  

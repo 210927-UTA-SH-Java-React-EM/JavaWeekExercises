@@ -6,9 +6,10 @@ class Producer extends Thread {
 
     private final LinkedList<Integer> buffer;
     private final int SIZE = 10;
-
+   
     public Producer(LinkedList<Integer> buffer) {
         this.buffer = buffer;
+        
     }
 
     @Override
@@ -32,8 +33,18 @@ class Producer extends Thread {
         synchronized(buffer) {
         	//1. While the buffer is full, print that is is full and wait with the wait() method
         	//HINT wait needs to be called on the buffer itself
+        	while(buffer.size() == SIZE)
+        	{
+        		System.out.println("Buffer is full");
+        		buffer.wait();
+        	}
         	//2. If the buffer is empty add the next value to the buffer
+        	if(buffer.isEmpty())
+        	{
+        		buffer.add(i);
+        	}
         	//3. Notify the other threads the buffer has been updated with notify
+        	buffer.notifyAll();
         	//Hint notify needs to be called on the buffer itself
         }
     }

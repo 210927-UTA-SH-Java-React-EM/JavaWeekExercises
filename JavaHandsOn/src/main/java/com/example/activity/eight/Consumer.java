@@ -29,11 +29,21 @@ class Consumer extends Thread {
     	//synchronized will allow us to share our buffer across multiple threads nicely
     	synchronized(buffer) {
     		//1. While the buffer is empty, print that is is empty and wait with the wait() method
+    		while(buffer.isEmpty())
+    		{
+    			System.out.println("buffer is empty");
+    		  buffer.wait();	
+    		}
         	//HINT wait needs to be called on the buffer itself
     		//2. Notify the other threads the buffer has been updated with notify
+    		
+    	
+        		int x = buffer.remove();
     		//Hint notify needs to be called on the buffer itself
-        	//3. Grab the item at index 0 of the buffer and return it
-    		return 0;
+        	//3. Grab the item at index 0 of the buffer and return it         
+          //Integer x = buffer.get(0);
+    		  buffer.notifyAll();
+    		return  x ;
     	}
     }
 }
