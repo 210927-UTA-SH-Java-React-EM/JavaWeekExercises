@@ -35,7 +35,7 @@ public class ControlFlowActivity {
 		
 		for(int i = 0; i <= 100; i++) {
 			if( i % 2 == 0) {
-				a += i;
+				a = a + i;
 			}
 				
 		}
@@ -46,15 +46,17 @@ public class ControlFlowActivity {
 	
 	public int sumOfNumbers(int input) {
 		//Fill out the method below that adds up all the numbers from 1 to the given input using a while loop
-		int a = input;
+		int counter = 1;
+		int total = 0;
 		
-		while(a <= 100) {
-			a += a;
+		
+		while(counter <= input) {
+			total += counter ;
 		        
 		}
 		
 		//This should be changed to return the correct output
-		return a;
+		return total;
 	}
 
 }
