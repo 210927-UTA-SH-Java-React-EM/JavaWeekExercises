@@ -14,9 +14,9 @@ public class User {
 	
 	//Implement the method below to throw a custom Exception called InvalidCredentialsException if the users credentials are incorrect
 	public boolean login(String username, String password) {
-		
+		boolean b = false;
 		//If the user logged in successfully return true
-		return false;
+		return b;
 	}
 	
 	//Implement the method below to throw a custom Exception called InsufficientFundsException if the users balance is not high enough to

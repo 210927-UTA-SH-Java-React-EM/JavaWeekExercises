@@ -16,7 +16,7 @@ public class ControlFlowActivity {
 		else if(input%15==0)
 			s="buz";
 		else 
-			s="";
+			s="input can not be dibvisible by 3 or/and 5";
 		return s;
 	}
 	
