@@ -12,21 +12,16 @@ package com.example.activity.one;
 // requirement: In this file create a public class called Foo
 public class Foo{
 	
-	// requirement: Foo should have a public String variable called bar
 	public String bar = "";
 	
 	public Foo() {
-		// requirement: Foo should have a public no-args constructor that sets the default value of bar to "bar"
 		this.bar = "bar";
 	}
 
 	public Foo(String pBar) {
-		// requirement: Foo should have a public one-arg constructor that sets the value of bar to what ever 
-		// value is input into the constructor
 		this.bar = pBar;
 	}
 	
-	// requirement: Foo should have a method called printBar which simply prints the value of your variable bar
 	public void printBar() { System.out.println(this.bar);}
 	
 	public static void main(String[] args) {

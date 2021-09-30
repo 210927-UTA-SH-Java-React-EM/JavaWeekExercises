@@ -11,28 +11,6 @@ package com.example.activity.five;
 	  updated cart
 	  
 	- A public abstract method called buy
-	
-2. Create an interface called Premium with:
-	- A String property title set to the title of the user
-	
-	- An int method called discountPrice which takes in an int
-	
-3. Create a class called PremiumCustomer that:
-	- extends Customer, and implements Premium
-	
-	- has private properties vipCard which is their card number, a integer years
-	  which keeps track of the number of years they have been vip
-	
-	- The PremiumCustomer should have a no-args constructor, and an all args
-	  constructor that allows you to set the properties of the Customer class,
-	  and the properties of the PremiumCustomer
-	  
-	- implement the abstract methods so that the premium user gets a discount
-	  of 15% on all items in their cart, and the discounted cost gets deducted
-	  from their balance
-	  
-	- implement the getters and setters for the premium user
- * 
  */
 
 public abstract class Customer {
@@ -51,7 +29,7 @@ public abstract class Customer {
 	
 	public String addToCart(String item, int cost) 
 	{
-		cart += item;
+		cart += ";" + item;
 		cartCost += cost;
 		return cart;
 	}

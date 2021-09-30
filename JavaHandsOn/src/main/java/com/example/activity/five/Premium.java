@@ -10,4 +10,7 @@ package com.example.activity.five;
 
 public interface Premium {
 
+	String title = "";
+		
+	public int discountPrice(int p);
 }

@@ -11,32 +11,32 @@ import com.example.activity.seven.User;
 public class ExceptionsTest {
 
 	@Test
-	public void validLoginTest() {
+	public void validLoginTest() throws InvalidCredentialsException {
 		User u = new User("test", "password", 10);
 		assertTrue(u.login("test", "password"));
 	}
 	
 	@Test(expected = InvalidCredentialsException.class)
-	public void invalidUsernameTest() {
+	public void invalidUsernameTest() throws InvalidCredentialsException {
 		User u = new User("test", "password", 10);
 		u.login("tester", "password");
 	}
 	
 	@Test(expected = InvalidCredentialsException.class)
-	public void invalidPasswordTest() {
+	public void invalidPasswordTest() throws InvalidCredentialsException {
 		User u = new User("test", "password", 10);
 		u.login("test", "pass");
 	}
 	
 	@Test
-	public void sufficientFundsTest() {
+	public void sufficientFundsTest() throws InsufficientFundsException {
 		User u = new User("test", "password", 10);
 		int remaining = u.pay(5);
 		assertEquals(5, remaining);
 	}
 	
 	@Test(expected = InsufficientFundsException.class)
-	public void insufficientFundsTest() {
+	public void insufficientFundsTest() throws InsufficientFundsException {
 		User u = new User("test", "password", 10);
 		u.pay(15);
 	}

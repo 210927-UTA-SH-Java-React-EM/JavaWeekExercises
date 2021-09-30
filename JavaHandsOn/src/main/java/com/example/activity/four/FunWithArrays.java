@@ -1,5 +1,6 @@
 package com.example.activity.four;
 
+
 public class FunWithArrays {
 	
 	public int[] squares(int a, int b, int c, int d) {
