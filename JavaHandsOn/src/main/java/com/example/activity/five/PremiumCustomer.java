@@ -47,7 +47,7 @@ public class PremiumCustomer extends Customer implements Premium{
 	@Override
 	public int discountPrice(int x) {
 		
-	    x = x * 15/100;	
+	    x -= x * 15/100;	
 		
       balance -= x;	    
 		return x;
