@@ -6,7 +6,7 @@ public class PremiumCustomer extends Customer implements Premium {
 	private int years;
 	
 	public PremiumCustomer() {
-		super("name", 0, "", 0);
+		super("", 0, "", 0);
 		this.vipCard = 0;
 		this.years = 0;
 	}

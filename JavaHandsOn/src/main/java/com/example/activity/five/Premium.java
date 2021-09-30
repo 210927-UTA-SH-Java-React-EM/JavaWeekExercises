@@ -2,7 +2,7 @@ package com.example.activity.five;
 
 public interface Premium {
 
-	String title = "Vip";
+	String title = "Premium";
 	public int discountPrice(int price);
 	
 }
