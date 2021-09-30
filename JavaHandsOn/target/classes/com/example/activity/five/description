@@ -1,5 +1,5 @@
 1. Create an abstract class called Customer with:
-	- Four properties, name, balance, cart (String), cartCost
+	- Four properties, name, balance, cart (String), cartCost (double)
 	
 	- An all-args constructor used for constructor chaining
 	
@@ -10,8 +10,8 @@
 	- A public abstract method called buy
 	
 2. Create an interface called Premium with:
-	- A String property title set to the title of the user
-	
+	- A String property title set to the title of the user (what type of user they are)
+	4x4
 	- An int method called discountPrice which takes in an int
 	
 3. Create a class called PremiumCustomer that:
