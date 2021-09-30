@@ -12,10 +12,20 @@ public class PremiumCustomer extends Customer implements Premium {
 		this.years = year;
 	}
 	
+	public PremiumCustomer()
+	{
+		super("name", 0, "empty", 0);
+		this.vipCard = "empty";
+		this.years = 0;
+	}
 
 	@Override
+	public int discountPrice(int balance) {
+		this.balance = balance;
+		return (int) (this.balance*0.85);
+	}
+	
 	public int discountPrice() {
-		// TODO Auto-generated method stub
 		return (int) (this.balance*0.85);
 	}
 	

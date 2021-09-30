@@ -2,9 +2,9 @@ package com.example.activity.five;
 
 public interface Premium {
 
-	String title = "title of user";
+	String title = "Premiuim User";
 	
-	int discountPrice();
+	int discountPrice(int discount);
 	
 	
 		
