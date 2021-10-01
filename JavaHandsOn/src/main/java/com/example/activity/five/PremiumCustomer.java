@@ -1,14 +1,5 @@
 package com.example.activity.five;
 
-/*
-3. Create a class called PremiumCustomer that:
-	  
-	- implement the abstract methods so that the premium user gets a discount
-	  of 15% on all items in their cart, and the discounted cost gets deducted
-	  from their balance
-	  
-	- implement the getters and setters for the premium user
- */
 
 public class PremiumCustomer extends Customer implements Premium {
 	
