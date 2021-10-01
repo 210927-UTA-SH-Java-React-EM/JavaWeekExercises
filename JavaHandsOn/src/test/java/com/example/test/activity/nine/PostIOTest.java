@@ -36,7 +36,7 @@ public class PostIOTest {
 		try {
 			userList = io.readObjects();
 			assertEquals("The list should have no posts", 0, userList.size());
-		} catch (IOException e) {
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
@@ -52,7 +52,7 @@ public class PostIOTest {
 			io.writeObjects(pList);
 			
 			assertEquals(1, pList.size());
-		} catch (IOException e) {
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
@@ -70,7 +70,7 @@ public class PostIOTest {
 			io.writeObjects(pList);
 			
 			assertEquals(2, pList.size());
-		} catch (IOException e) {
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
