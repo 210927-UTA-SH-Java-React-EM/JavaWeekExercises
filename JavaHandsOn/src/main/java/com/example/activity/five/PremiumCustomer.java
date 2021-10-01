@@ -19,17 +19,17 @@ public PremiumCustomer(String name, double balance, String cart, double cartCost
 	this.years = years;
 }
 
-public void buy(double purchaseCost) {
+public void buy() {
 	System.out.println("We've completed your transaction!");
 	balance -= cartCost;
 	System.out.println("Your available balance is now $" + formatter.format(balance));
 }
 
-public double discountPrice(double cartCost) {
+public double discountPrice(double discountCart) {
 	double discountAmount = 0;
-	discountAmount = (cartCost * .15);
+	discountAmount = (discountCart * .15);
 	cartCost -= discountAmount;
-	System.out.println("Because of your loyal membership, we've taken 10% ($" + formatter.format(discountAmount) + ") off of your order!");
+	System.out.println("Because of your loyal membership, we've taken 15% ($" + discountAmount + ") off of your order!");
 	System.out.println("Your total is $" +formatter.format(cartCost));
 	return cartCost;
 }
