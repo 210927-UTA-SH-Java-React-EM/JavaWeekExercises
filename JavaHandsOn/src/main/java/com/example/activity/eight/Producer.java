@@ -30,6 +30,12 @@ class Producer extends Thread {
     	
     	//synchronized will allow us to share our buffer across multiple threads nicely
         synchronized(buffer) {
+        	if (!buffer.isEmpty()) {
+        		System.out.println("Buffer full");
+        		buffer.wait();
+        	}
+        	buffer.notify();
+        	buffer.add(i);
         	//1. While the buffer is full, print that is is full and wait with the wait() method
         	//HINT wait needs to be called on the buffer itself
         	//2. If the buffer is empty add the next value to the buffer
