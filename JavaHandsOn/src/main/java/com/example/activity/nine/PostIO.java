@@ -14,11 +14,24 @@ public class PostIO<Post> {
 	//Fillout the writeObjects method to take in an ArrayList of posts to write to the file
 	public void writeObjects(ArrayList<Post> postList) {
 
+		try (ObjectOutputStream printer = new ObjectOutputStream(new FileOutputStream("post.txt", false));)
+		{
+			printer.writeObject(postList);
+			printer.flush();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
 	}
 	
 	//Fillout the readObjects method to get all the posts from the file
 	public ArrayList<Post> readObjects() throws IOException{
 
+		try(ObjectInputStream reader = new ObjectInputStream(new FileInputStream("post.txt"));)
+		{
+			ArrayList<Post> postList = (ArrayList<Post>)reader.readObject();
+			return postList;
+		} catch (Exception e) {}
 		return new ArrayList<Post>();
 	}
 	

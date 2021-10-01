@@ -23,7 +23,7 @@ public class PostIOTest {
 		if(Files.exists(Paths.get("post.txt"))) {
 			System.out.println("Clearing the test file");
 			try {
-				Files.delete(Paths.get("test.txt"));
+				Files.delete(Paths.get("post.txt"));
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
