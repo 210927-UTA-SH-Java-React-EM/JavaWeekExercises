@@ -14,11 +14,8 @@ public class FunWithStrings {
 		for (int i = 0; i<input.length()&result==-1;i++) {
 			if(IsVowel(input.charAt(i))) {
 				result = i;
-			}
-			
+			}	
 		}
-		
-		
 		//This should be modified to return the correct char
 		return result;
 	}

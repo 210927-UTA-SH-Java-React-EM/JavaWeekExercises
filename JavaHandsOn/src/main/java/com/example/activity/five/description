@@ -9,6 +9,7 @@
 	  
 	- A public abstract method called buy
 	
+	
 2. Create an interface called Premium with:
 	- A String property title set to the title of the user
 	

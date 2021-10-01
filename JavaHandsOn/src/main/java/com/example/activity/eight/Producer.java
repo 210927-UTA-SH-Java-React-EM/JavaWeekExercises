@@ -31,10 +31,27 @@ class Producer extends Thread {
     	//synchronized will allow us to share our buffer across multiple threads nicely
         synchronized(buffer) {
         	//1. While the buffer is full, print that is is full and wait with the wait() method
-        	//HINT wait needs to be called on the buffer itself
+        	while(buffer.size()==SIZE) {
+        	System.out.println("Buffer is FULL");
+
+        		buffer.wait();//HINT wait needs to be called on the buffer itself
+        	}
+        	
         	//2. If the buffer is empty add the next value to the buffer
+        	if(buffer.isEmpty())
+        		buffer.add(i);
+          	 System.out.println("Status of LL in Producer ");
+          	 print(buffer);
         	//3. Notify the other threads the buffer has been updated with notify
+        	buffer.notifyAll();
         	//Hint notify needs to be called on the buffer itself
         }
+    }
+    
+    private LinkedList<Integer> print(LinkedList<Integer> buffer){
+    	for (Integer integer : buffer) {
+			System.out.println(integer);
+		}
+		return buffer;
     }
 }

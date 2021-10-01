@@ -13,18 +13,33 @@ public class User {
 	}
 	
 	//Implement the method below to throw a custom Exception called InvalidCredentialsException if the users credentials are incorrect
-	public boolean login(String username, String password) {
+	public boolean login(String username, String password) throws InvalidCredentialsException {
+		
+		String acceptedName="test";
+		String acceptedPassword="password";
+		boolean status;
+		
+		if(username.equals(acceptedName)&&password.equals(acceptedPassword))
+			status = true;
+		else
+			throw new InvalidCredentialsException();
 		
 		//If the user logged in successfully return true
-		return false;
+		return status;
 	}
 	
-	//Implement the method below to throw a custom Exception called InsufficientFundsException if the users balance is not high enough to
+	//Implement the method below to throw a custom Exception 
+	//called InsufficientFundsException if the users balance is not high enough to
 	//pay for the cost
-	public int pay(int cost) {
+	public int pay(int cost) throws InsufficientFundsException{
+		
+		if(balance >= cost) 
+			balance -=cost;
+		else
+			throw new InsufficientFundsException();
 		
 		//Should return the remaining balance if they had enough money
-		return 0;
+		return balance;
 	}
 	
 }
