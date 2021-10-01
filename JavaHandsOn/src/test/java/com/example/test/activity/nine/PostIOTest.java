@@ -28,10 +28,11 @@ public class PostIOTest {
 				e.printStackTrace();
 			}
 		}
+		
 	}
 	
 	@Test
-	public void testEmptyUserList() {
+	public void testEmptyUserList() throws ClassNotFoundException {
 		List<Post> userList;
 		try {
 			userList = io.readObjects();
@@ -43,7 +44,7 @@ public class PostIOTest {
 	}
 	
 	@Test
-	public void testCreatNewPost() {
+	public void testCreatNewPost() throws ClassNotFoundException {
 		Post p1 = new Post("Test Content", "Test Username", 0);
 		ArrayList<Post> pList;
 		try {
@@ -59,7 +60,7 @@ public class PostIOTest {
 	}
 	
 	@Test
-	public void testCreateMultipleUsers() {
+	public void testCreateMultipleUsers() throws ClassNotFoundException {
 		Post p1 = new Post("Test Content", "Test Username", 0);
 		Post p2 = new Post("Test Content 2", "Test Username", 0);
 		ArrayList<Post> pList;

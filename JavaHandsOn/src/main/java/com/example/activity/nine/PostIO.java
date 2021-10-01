@@ -1,5 +1,6 @@
 package com.example.activity.nine;
 
+import java.io.BufferedWriter;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -11,15 +12,31 @@ import java.util.ArrayList;
 //There may be Exceptions with the test, but as long as you are passing the tests, thats what matters
 public class PostIO<Post> {
 	
+	protected String fileName;
+	
 	//Fillout the writeObjects method to take in an ArrayList of posts to write to the file
 	public void writeObjects(ArrayList<Post> postList) {
-
+		try(ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("post.txt"));){
+			out.writeObject(postList);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 	
-	//Fillout the readObjects method to get all the posts from the file
-	public ArrayList<Post> readObjects() throws IOException{
+	public String getFileName() {
+		return fileName;
+	}
 
-		return new ArrayList<Post>();
+	public void setFileName(String fileName) {
+		this.fileName = fileName;
+	}
+
+	//Fillout the readObjects method to get all the posts from the file
+	public ArrayList<Post> readObjects() throws IOException, ClassNotFoundException{
+		ArrayList<Post> list;
+		ObjectInputStream in = new ObjectInputStream(new FileInputStream("post.txt"));
+		list = (ArrayList<Post>) in.readObject();
+		return list;
 	}
 	
 }
