@@ -31,6 +31,8 @@ class Producer extends Thread {
     	//synchronized will allow us to share our buffer across multiple threads nicely
         synchronized(buffer) {
         	//1. While the buffer is full, print that is is full and wait with the wait() method
+        	
+        	
         	//HINT wait needs to be called on the buffer itself
         	//2. If the buffer is empty add the next value to the buffer
         	//3. Notify the other threads the buffer has been updated with notify

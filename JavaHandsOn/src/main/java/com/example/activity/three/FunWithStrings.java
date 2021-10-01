@@ -44,15 +44,20 @@ public class FunWithStrings {
 	}
 	
 	public boolean isPalindrome(String input) {
-		boolean isPalin = false;
-		int k =input.length()-1;
+		 boolean isPalin = false;
+	
 		//Use your knowledge of loops, and .charAt() to find out if the input is a palendrome
-		for(int i =0; i<input.length()/2;i++) {
-			if(input.charAt(i)==input.charAt(k)) {
-				return true;
-			}
+		
+		//I tried a few things but it doesn't seem to go into the if block of my statement
+		
+		//why doesn't this work as returning a boolean?
+		
+		for(int i =0; i>=input.length();i++) {
+		
+			
 		}
 		//This should be modified to return the correct boolean
+		
 		
 	}
 	
