@@ -25,16 +25,35 @@ class Producer extends Thread {
     }
     
     
-    //Fill out the produce method according to the given sudo code, this will implement the producer for us
+    public LinkedList<Integer> getBuffer() {
+		return buffer;
+	}
+
+	public int getSIZE() {
+		return SIZE;
+	}
+
+	//Fill out the produce method according to the given sudo code, this will implement the producer for us
     private void produce(int i) throws InterruptedException {
     	
     	//synchronized will allow us to share our buffer across multiple threads nicely
         synchronized(buffer) {
         	//1. While the buffer is full, print that is is full and wait with the wait() method
         	//HINT wait needs to be called on the buffer itself
+        	System.out.println(buffer.size());
+        	if (buffer.size() == i) {
+        		System.out.println("Producer buffer is full");
+        		buffer.wait();
+        	}
+        	
         	//2. If the buffer is empty add the next value to the buffer
         	//3. Notify the other threads the buffer has been updated with notify
         	//Hint notify needs to be called on the buffer itself
+        	if (buffer.size() == 0) {
+        		buffer.add(1);
+        		buffer.notifyAll();
+        	}
+        	
         }
     }
 }

@@ -32,8 +32,13 @@ class Consumer extends Thread {
         	//HINT wait needs to be called on the buffer itself
     		//2. Notify the other threads the buffer has been updated with notify
     		//Hint notify needs to be called on the buffer itself
-        	//3. Grab the item at index 0 of the buffer and return it
-    		return 0;
+    		//3. Grab the item at index 0 of the buffer and return it
+    		if (buffer.size() == 0) {
+    			buffer.wait();
+    			System.out.println("Consumer buffer is empty");
+        		buffer.notifyAll();
+        	}
+    		return buffer.getFirst();
     	}
     }
 }

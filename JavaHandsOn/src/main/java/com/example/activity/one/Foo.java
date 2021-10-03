@@ -18,8 +18,8 @@ public class Foo {
 	}
 	
 	public Foo(String bar) {
-		this.bar = bar;
-		
+		this();
+		this.bar = bar;		
 	}
 	
 	public void printBar() {
@@ -28,13 +28,13 @@ public class Foo {
 	}
 	
 	public static void main(String[] args) {
-		Foo obj1 = new Foo();
-	    System.out.println(obj1.bar);
-	    obj1.printBar();
-	    
-	    Foo obj = new Foo("booze");
+		Foo obj = new Foo();
 	    System.out.println(obj.bar);
-	    obj.printBar();	    
+	    obj.printBar();
+	    
+	    Foo obj1 = new Foo("booze");
+	    System.out.println(obj1.bar);
+	    obj1.printBar();	    
 	    
 	}
 }

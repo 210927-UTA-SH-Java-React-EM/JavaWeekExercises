@@ -2,6 +2,8 @@ package com.example.activity.four;
 
 import com.example.activity.one.Foo;
 
+import java.lang.Math;
+
 public class FunWithArrays {
 	
 	public int[] squares(int a, int b, int c, int d) {
@@ -10,7 +12,7 @@ public class FunWithArrays {
 		int len = inputArr.length;
 		int[] outputArr = new int[4];
 		for (int i = 0; i < len; i++) {
-			outputArr[i] = inputArr[i] * inputArr[i];
+			outputArr[i] = (int) Math.pow(inputArr[i], 2);
 		}
 		
 		return outputArr;

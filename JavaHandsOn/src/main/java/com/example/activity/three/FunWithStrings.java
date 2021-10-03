@@ -9,22 +9,18 @@ public class FunWithStrings {
 	public int getFirstVowel(String input) {
 		//Using the .length() method and .charAt() method
 		//Loop through the input text and return the first instance of a vowel (aeiou)
-		//Should return -1 if no vowels present		
-		//This should be modified to return the correct char
-
+		//Should return -1 if no vowels present
+		input = input.toLowerCase();
 		int len = input.length();
 		//int le = vowelsArr.length;		
 		String vowels = "aeiou";
 		int le = vowels.length();
-		boolean found = false;
 		int res = -1;
 		for (int i = 0; i < len; i++) {
-			for (int j = 0; j < le; j++) {
-				if (Character.toLowerCase(input.charAt(i)) == vowels.charAt(j)) {
-					res = i;
-					break;
-				}				
-			}			
+			if (vowels.indexOf(input.charAt(i)) > -1) {
+				res = i;
+				break;
+			}
 		}
 		
 		return res;
