@@ -6,7 +6,7 @@ public class PremiumCustomer extends Customer implements Premium{
 	private int year;
 	
 	public PremiumCustomer() {
-		super("", 0, "", 0);
+		super("", 0.0, "", 0.0);
 		this.setVipCard(0);
 		this.setYear(0);
 	}
@@ -18,11 +18,7 @@ public class PremiumCustomer extends Customer implements Premium{
 		this.setYear(year);
 	}
 	
-	public void setTitel(String tital)
-	{
-		
-		Premium.titel=tital;
-	}
+	
 	@Override
 	public double discountPrice(int a) {
 		// TODO Auto-generated method stub

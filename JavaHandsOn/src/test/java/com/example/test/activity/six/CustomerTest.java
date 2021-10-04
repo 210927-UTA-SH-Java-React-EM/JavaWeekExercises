@@ -1,10 +1,7 @@
-package com.example.test.activity.six;
-
-import static org.junit.Assert.*;
+ package com.example.test.activity.six;
 
 import org.junit.Test;
 
-import com.example.activity.five.Customer;
 import com.example.activity.five.PremiumCustomer;
 
 public class CustomerTest {
