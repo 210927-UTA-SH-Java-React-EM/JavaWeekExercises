@@ -23,7 +23,7 @@ public class PostIOTest {
 		if(Files.exists(Paths.get("post.txt"))) {
 			System.out.println("Clearing the test file");
 			try {
-				Files.delete(Paths.get("test.txt"));
+				Files.delete(Paths.get("post.txt"));
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
@@ -36,8 +36,7 @@ public class PostIOTest {
 		try {
 			userList = io.readObjects();
 			assertEquals("The list should have no posts", 0, userList.size());
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
@@ -52,8 +51,7 @@ public class PostIOTest {
 			io.writeObjects(pList);
 			
 			assertEquals(1, pList.size());
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
@@ -70,8 +68,7 @@ public class PostIOTest {
 			io.writeObjects(pList);
 			
 			assertEquals(2, pList.size());
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
