@@ -15,7 +15,8 @@ class Consumer extends Thread {
     public void run() {
         for(int i=0; i<SIZE; i++){
             try {
-                System.out.println("Consumed: " + consume());
+            	consume();
+                System.out.println("Consumed: " + (i + 1));
                 Thread.sleep(50);
             } catch (InterruptedException e) {
             	e.printStackTrace();
@@ -30,10 +31,16 @@ class Consumer extends Thread {
     	synchronized(buffer) {
     		//1. While the buffer is empty, print that is is empty and wait with the wait() method
         	//HINT wait needs to be called on the buffer itself
+    		if (buffer.isEmpty()) 
+    		{
+    			System.out.println("The buffer is empty.");
+    			buffer.wait();
+    		}
     		//2. Notify the other threads the buffer has been updated with notify
     		//Hint notify needs to be called on the buffer itself
+    		buffer.notify();
         	//3. Grab the item at index 0 of the buffer and return it
-    		return 0;
+    		return buffer.getFirst();
     	}
     }
 }
